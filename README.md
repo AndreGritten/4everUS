@@ -1,6 +1,10 @@
 # 4everUS 💜
 
-<img src="assets/img/logo.png" alt="Logo do 4everUS" width="150">
+<div style="display: flex; gap: 40px; align-items: center;">
+  <img src="assets/img/logo.png" alt="Logo do 4everUS" width="150">
+  <img src="assets/img/logo_4everUS_W.png" alt="Logo do 4everUS" width="150">
+  <img src="assets/img/logo_4everUS_B.png" alt="Logo do 4everUS" width="150">
+</div>
 
 ---
 
