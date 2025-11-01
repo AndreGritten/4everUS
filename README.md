@@ -4,7 +4,7 @@
 
 ---
 
-## ⚠ Projeto em desenvolvimento, Repositório, códigos e Read.me formulados para organização ⚠
+## ⚠ Projeto em desenvolvimento, design do repositório formulado para organização ⚠
 
 ## 🌟 Sobre o Projeto / About the Project
 
