@@ -4,6 +4,8 @@
 
 ---
 
+## ⚠⚠⚠ Projeto em desenvolvimento, Repositório, códigos e Read.me formulados para organização ⚠⚠⚠
+
 ## 🌟 Sobre o Projeto / About the Project
 
 **PT:**  
