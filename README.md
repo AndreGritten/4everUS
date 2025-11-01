@@ -1,6 +1,6 @@
 # 4everUS 💜
 
-<img src="assets/img/logo_4everUS.png" alt="Logo do Projeto" width="150">
+<img src="assets/img/logo.png" alt="Logo do 4everUS" width="150">
 
 ---
 
