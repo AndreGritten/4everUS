@@ -1,6 +1,6 @@
 # 4everUS 💜
 
-![Logo do Projeto](assets/img/logo.png) <!-- Coloque sua logo nesse caminho -->
+<img src="assets/img/logo_4everUS.png" alt="Logo do Projeto" width="150">
 
 ---
 
