@@ -1,0 +1,105 @@
+:root {
+    --purple-main: #7d2ae8;
+    --purple-dark: #6825c8;
+}
+
+/* Fundo em degradê */
+body {
+    background: linear-gradient(135deg, #6f00ff, #9b59b6);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagem do lado esquerdo */
+.bg-image {
+    background-image: url('../assets/img/and_nayh.JPG'); /* sua imagem aqui */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* mesma altura da tela */
+    position: relative;
+}
+
+/* camada escura por cima da imagem pra melhorar a leitura */
+.bg-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* escurece levemente */
+}
+
+.bg-image > .text-center {
+    position: relative; /* mantém o texto acima da camada escura */
+    z-index: 2;
+}
+
+/* ajusta responsividade */
+@media (max-width: 768px) {
+    .bg-image {
+        display: none; /* esconde imagem no mobile */
+    }
+}
+
+/* Camada escura sobre a imagem */
+.bg-overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+    height: 100%;
+    width: 100%;
+}
+
+/* Card com efeito de vidro */
+.card.custom-card {
+    background: #9b59b6;
+    border: none;
+    padding: 1.5rem;
+    color: white;
+    width: 28rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+}
+
+/* Títulos */
+.card h1, .card h5 {
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.card img.card-img-top {
+    max-width: 200px;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--purple-main);
+    border-color: var(--purple-main);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--purple-dark);
+    border-color: var(--purple-dark);
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--purple-dark);
+}
+
+/* Modal estilo glass */
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    color: #333;
+}
