@@ -1,105 +1,127 @@
-:root {
-    --purple-main: #7d2ae8;
-    --purple-dark: #6825c8;
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 992px) {
+  /* Esconde a imagem lateral */
+  .bg-image {
+    display: none;
+  }
+
+  /* Centraliza o card verticalmente e remove altura fixa */
+  .flip-container, .card.custom-card {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Adapta padding interno */
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  /* Melhora legibilidade em telas menores */
+  body {
+    overflow-y: auto;
+  }
 }
 
-/* Fundo em degradê */
-body {
-    background: linear-gradient(135deg, #6f00ff, #9b59b6);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 576px) {
+  /* Ajusta tipografia */
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
 }
+
+
+
+:root {
+  --purple-main: #7d2ae8;
+  --purple-dark: #6825c8;
+}
+
+/* Fundo degradê */
+body {
+  background: linear-gradient(135deg, #6f00ff, #9b59b6);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.card-body {
+  min-height: 400px;
+}
+
 
 /* Imagem do lado esquerdo */
 .bg-image {
-    background-image: url('../assets/img/and_nayh.JPG'); /* sua imagem aqui */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* mesma altura da tela */
-    position: relative;
+  background-image: url('../assets/img/and_nayh.JPG');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
-
-/* camada escura por cima da imagem pra melhorar a leitura */
 .bg-image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* escurece levemente */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.bg-image > .text-center {
-    position: relative; /* mantém o texto acima da camada escura */
-    z-index: 2;
-}
-
-/* ajusta responsividade */
-@media (max-width: 768px) {
-    .bg-image {
-        display: none; /* esconde imagem no mobile */
-    }
-}
-
-/* Camada escura sobre a imagem */
-.bg-overlay {
-    background-color: rgba(0, 0, 0, 0.45);
-    height: 100%;
-    width: 100%;
-}
-
-/* Card com efeito de vidro */
+/* Card */
 .card.custom-card {
-    background: #9b59b6;
-    border: none;
-    padding: 1.5rem;
-    color: white;
-    width: 28rem;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    border-radius: 0px;
-}
-
-/* Títulos */
-.card h1, .card h5 {
-    color: #fff;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Logo */
-.card img.card-img-top {
-    max-width: 200px;
-    margin: 0 auto 1rem;
-    display: block;
+  background: #9b59b6;
+  border: none;
+  color: white;
+  width: 28rem;
+  height: 45rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
 
 /* Botões */
 .btn-primary {
-    background-color: var(--purple-main);
-    border-color: var(--purple-main);
+  background-color: var(--purple-main);
+  border-color: var(--purple-main);
 }
-
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: var(--purple-dark);
-    border-color: var(--purple-dark);
+.btn-primary:hover {
+  background-color: var(--purple-dark);
 }
-
-.btn-outline-light {
-    border-color: white;
-    color: white;
-}
-
 .btn-outline-light:hover {
-    background-color: white;
-    color: var(--purple-dark);
+  background-color: white;
+  color: var(--purple-dark);
 }
 
-/* Modal estilo glass */
-.modal-content {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 1rem;
-    color: #333;
+/* Efeito flip */
+.flip-container {
+  perspective: 1000px;
+  width: 28rem;
+  height: 45rem;
+  position: relative;
+}
+.flipper {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.flipper.flipped {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+.back {
+  transform: rotateY(180deg);
 }
